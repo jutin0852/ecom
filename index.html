@@ -21,18 +21,25 @@
         <div >
         
         <img id="headerimg" style="height:40px ;" src="/images/image-avatar.png" alt="">
-        <img id="headerimg1" src="/images/icon-cart.svg" alt="">
+        <img id="headerimg1" src="/images/icon-cart.svg" onclick="cart()" alt="">
     </div>
 
     </header>
     <div id="whole">
-    <div>
-        <img id="bigimg" src="/images/image-product-1.jpg" alt="">
+    <div id="imgs">
+        <img id="bigimg" onclick="openModal();currentSlide(1)" src="/images/image-product-1.jpg" alt="">
         <div id="smallimgs">
-            <img class="smallimg active" src="/images/image-product-1-thumbnail.jpg" alt="">
-            <img class="smallimg" src="/images/image-product-2-thumbnail.jpg" alt="">
-            <img class="smallimg" src="/images/image-product-3-thumbnail.jpg" alt="">
-            <img class="smallimg" src="/images/image-product-4-thumbnail.jpg" alt="">
+            <img onclick="openModal();currentSlide(1)" class="smallimg active hover-shadow" src="/images/image-product-1-thumbnail.jpg" alt="">
+            <img onclick="openModal();currentSlide(2)" class="smallimg hover-shadow" src="/images/image-product-2-thumbnail.jpg" alt="">
+            <img onclick="openModal();currentSlide(3)" class="smallimg hover-shadow" src="/images/image-product-3-thumbnail.jpg" alt="">
+            <img onclick="openModal();currentSlide(4)" class="smallimg hover-shadow" src="/images/image-product-4-thumbnail.jpg" alt="">
+        </div>
+    </div>
+    <div id="cart">
+        <div id="cartname"><h3>Cart</h3></div>
+        <div id="incart">
+            <h3 id="emcart">your cart is empty</h3>
+
         </div>
     </div>
     <div id="second">
@@ -48,9 +55,57 @@
                 <span id="zero">0</span>
                 <span id="plus">+</span>
              </div>
-             <button id="btn"><img src="/images/icon-cart.svg" alt="">Add to cart</button>
+             <button id="btn"><img src="images/icon-cart - Copy.svg"   alt="">Add to cart</button>
     </div>
 </div>
+
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <img src="/images/image-product-1.jpg" style="width:100%; border-radius: 20px;">
+      </div>
+  
+      <div class="mySlides">
+        <img src="/images/image-product-2.jpg" style="width:100%; border-radius: 20px;">
+      </div>
+  
+      <div class="mySlides">
+        <img src="/images/image-product-3.jpg" style="width:100%; border-radius: 20px;">
+      </div>
+  
+      <div class="mySlides">
+        <img src="/images/image-product-4.jpg" style="width:100%; border-radius: 20px;">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      
+  
+      <!-- Thumbnail image controls -->
+
+      <div class="column">
+        <img class="smallimg" src="/images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)" >
+      </div>
+  
+      <div class="column">
+        <img class="smallimg" src="/images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)" >
+      </div>
+  
+      <div class="column">
+        <img class="smallimg" src="/images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)" >
+      </div>
+  
+      <div class="column">
+        <img class="smallimg" src="/images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)" >
+      </div>
+    </div>
+  </div>
 
 
     </main>    

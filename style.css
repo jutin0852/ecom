@@ -18,6 +18,7 @@ header{
 header img{
     float: right;
    margin-top: -30px;
+   cursor: pointer;
 
 }
 #headerimg1{
@@ -37,6 +38,13 @@ li{
     display: inline;
     margin: 15px;
     color:  hsl(219, 9%, 45%);
+    cursor: pointer;
+    
+    
+}
+li:hover{
+    border-bottom: 6px solid hsl(26, 100%, 55%) ;
+    padding-bottom:46px ;
 }
 #whole{
     display: grid;
@@ -46,11 +54,19 @@ li{
     height: 370px;
     margin: 30px 50px;
     border-radius: 20px;
+    transition: 0.3s;
+}
+#bigimg:hover{
+    opacity: 0.7
 }
 .smallimg{
     height: 80px;
     margin-left: 15px;
     border-radius: 15px;
+    cursor: pointer;
+}
+.smallimg:hover{
+    opacity:0.7 ;
 }
 #smallimgs{
     margin-left: 35px;
@@ -76,7 +92,12 @@ p{
     border: none;
     margin-left: 10px;
     color: white;
+    box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
+    cursor: pointer;
     
+}
+#btn:hover{
+    opacity: 0.7;
 }
 #btn img{
     height:15px ;
@@ -89,6 +110,7 @@ p{
     padding: 8px 20px;
     border-radius: 5px;
     font-size: 1.3em;
+    cursor: pointer;
     
 }
 #minus{
@@ -112,7 +134,150 @@ p{
     margin-left: -5px;
 }
 .active{
-    border: 3px solid hsl(26, 100%, 55%) ;
+    outline: 3px solid hsl(26, 100%, 55%) ;
     opacity: 0.5;
     
 }
+    
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsl(220, 13%, 13%,0.9);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color:hsl(26, 100%, 55%)  ;
+    position: absolute;
+    top: 40px;
+    right: 400px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    padding-bottom:20px ;
+     
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  
+  /* Position the "next button" to the right */
+  .next {
+    left: 420px;
+   
+  }
+  .prev{
+    left:-30px
+
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color:hsl(26, 100%, 55%);
+  }
+  
+  
+  
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(231, 229, 229, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #cart{
+    width: 300px;
+    height: 180px;
+    box-shadow:-1px 5px 15px -5px black;
+    position:absolute;
+    left: 1100px;
+    top: 100px;
+    background-color: white;
+    display: none;
+  }
+  #cartname{
+    padding: 10px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    font-size: 0.9em;
+  }
+  #emcart{
+    color: hsl(219, 9%, 45%);
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 0.9em;
+
+  }
