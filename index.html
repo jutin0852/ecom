@@ -21,9 +21,9 @@
         
         <div id="headerimg">
           <span id="cartnum"></span>
-          <img id="headerimg1"  src="/images/icon-cart.svg" onclick="cart()" alt="">
+          <img id="headerimg1"  src="/images/icon-cart.svg" onclick="cart()" >
           
-          <img style="height:40px ;" src="/images/image-avatar.png" alt="">
+          <img style="height:40px ;" src="/images/image-avatar.png" >
           <span>
            
            
@@ -33,7 +33,7 @@
     </header>
     <div id="whole">
     <div id="imgs">
-        <img id="bigimg" onclick="openModal();currentSlide(1)" src="/images/image-product-1.jpg" alt="">
+        <img id="bigimg" onclick="openModal(); currentSlide(1)" src="/images/image-product-1.jpg" alt="">
         <div id="smallimgs">
             <img onclick="openModal();currentSlide(1)" class="smallimg active hover-shadow" src="/images/image-product-1-thumbnail.jpg" alt="">
             <img onclick="openModal();currentSlide(2)" class="smallimg hover-shadow" src="/images/image-product-2-thumbnail.jpg" alt="">
@@ -45,6 +45,15 @@
         <div id="cartname"><h3>Cart</h3></div>
         <div id="incart">
             <h3 id="emcart">your cart is empty</h3>
+            <div id="cartitem">
+              <img style="height:50px;margin-bottom: -10px;"src="/images/image-product-1-thumbnail.jpg" alt="">
+              <span style="display:inline-block; padding:0px 10px ; margin-top: -10px;" >
+                <p>fall limited Edition sneakers</p>
+                <p id="price">$125.00 x 3 <strong>$375.00</strong></p>
+              </span>
+              <img id="deleteCart" src="/images/icon-delete.svg"  alt=""><br><br>
+              <button id="btn" style="box-shadow: none; width: 250px;">Checkout</button>
+            </div>
 
         </div>
     </div>
