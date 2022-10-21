@@ -18,10 +18,16 @@
             <li>About</li>
             <li>Contact</li>
         </ul>
-        <div >
         
-        <img id="headerimg" style="height:40px ;" src="/images/image-avatar.png" alt="">
-        <img id="headerimg1" src="/images/icon-cart.svg" onclick="cart()" alt="">
+        <div id="headerimg">
+          <span id="cartnum"></span>
+          <img id="headerimg1"  src="/images/icon-cart.svg" onclick="cart()" alt="">
+          
+          <img style="height:40px ;" src="/images/image-avatar.png" alt="">
+          <span>
+           
+           
+          </span> 
     </div>
 
     </header>
@@ -51,11 +57,11 @@
              <h2 id="fifty" class="h2">50%</h2>
              <h2 style="font-size:0.9em ;color: hsl(220, 14%, 75%); text-decoration: line-through; ">$250.00</h2><br>
              <div id="add">
-                <span id="minus">-</span>
+                <span onclick="add()" id="minus">-</span>
                 <span id="zero">0</span>
-                <span id="plus">+</span>
+                <span onclick="add()" id="plus">+</span>
              </div>
-             <button id="btn"><img src="images/icon-cart - Copy.svg"   alt="">Add to cart</button>
+             <button id="btn" onclick="btn()"><img src="images/icon-cart - Copy.svg"   alt="">Add to cart</button>
     </div>
 </div>
 

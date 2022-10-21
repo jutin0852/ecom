@@ -38,6 +38,9 @@ function openModal() {
   }
 // **********cart pop
 var cartshop=document.getElementById('cart');
+var minus=document.getElementById('minus');
+var zero=document.getElementById('zero');
+var cartnum=document.getElementById("cartnum");
   function cart(){
    if(cartshop.className==""){
     cartshop.style.display="block"
@@ -47,9 +50,21 @@ var cartshop=document.getElementById('cart');
     cartshop.style.display="none";
     cartshop.classList.remove("cartt");
 
-   }
-    
-
-
-    
+   }   
   }
+function add(){
+  if(event.target.id=="minus"){
+    if(zero.textContent>0){
+      zero.textContent--;}}
+  if(event.target.id=="plus"){
+    zero.textContent++;
+  }
+
+}
+function btn(){
+  
+  if(zero.textContent>0){
+    cartnum.style.display="block";
+    cartnum.textContent=Number(cartnum.textContent)+Number( zero.textContent)
+  }
+}
