@@ -3,91 +3,457 @@
     padding: 0%;
     font-family:'kumbh sans',sans-serif;
 }
-body{
-    padding: 30px 100px;
+@media screen and (min-width:300px) {
+       
+  body{
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-header{
+    position: absolute;
+  
+  }
+  header{
    border-bottom: 1px solid hsl(220, 14%, 75%);
    padding-bottom: 50px;
    margin-bottom: 40px
-}
-#headerimg{
+  }
+  #headerimg{
     float: right;
-   margin-top: -30px;
+   margin-top: -5px;
    cursor: pointer;
-
-}
-#headerimg1{
-    margin: -15px 30px 0px 0px;
+  
+  }
+  #avatar{
+  height:40px; 
+  border: 2px solid rgb(0, 0, 0,0);
+   border-radius: 40px;
+  }
+  #avatar:hover{
+  border: 2px solid  hsl(26, 100%, 55%);
+  }
+  #headerimg1{
+    margin: -15px  10px 0px 0px;
     display: inline;
-
-}
-#sneak{
+  
+  }
+  #sneak{
     float: none;
     margin-top: 10px;
+  }
+  #tab{
+   
+    position: absolute;
+    background-color:white ;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    width: 180px;
+    font-weight: 700;
+    color: black;
+    display: none;
+    
+   
+  }
+  ul{
+    display: none;
+  }
+  li{
+    
+    /* list-style: none; */
+  
+    /* display: inline; */
+    margin: 15px;
+    /* color:  hsl(219, 9%, 45%); */
+    cursor: pointer;
+    /* display: none; */
+    
+    
+  }
+  li:hover{
+    border-right: 6px solid hsl(26, 100%, 55%) ;
+    padding-bottom:4px ;
+  }
+  #whole{
+    display: grid;
+    /* grid-template-columns: 50% 50%; */
+  }
+  #bigimg{
+    height: 360px;
+    /* margin: 30px 50px; */
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  #bigimg:hover{
+    opacity: 0.7
+  }
+  .smallimg{
+    height: 60px;
+    margin-left: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .smallimg:hover{
+    opacity:0.7 ;
+  }
+  #imgs{
+    margin: auto;
+  }
+  #smallimgs{
+    /* margin-left: 70px; */
+    display: none;
+  }
+  #second{
+    padding: 30px;
+  }
+  p{
+    line-height: 25px;
+    color:  hsl(219, 9%, 45%);
+    font-size: 0.8em;
+  }
+  .h2{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  #btn{
+    /* display: inline-block; */
+    padding: 15px 100px 10px 100px;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    /* margin-left: 10px; */
+    color: white;
+    box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
+    cursor: pointer;
+    
+  }
+  #btn:hover{
+    opacity: 0.7;
+  }
+  #btn img{
+    height:15px ;
+    margin: 0px 10px -4px 0px;
+  
+  }
+  #add{
+    display: inline-block;
+    background-color: hsl(223, 64%, 98%);
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    
+  }
+  #minus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #zero{
+    margin: 0px 120px;
+    /* font-size: 22px; */
+  }
+  #plus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #fifty{
+    background-color:hsl(25, 100%, 94%) ;
+    color: hsl(26, 100%, 55%);
+    font-size: 1.2em;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: -5px;
+  }
+  .active{
+    outline: 3px solid hsl(26, 100%, 55%) ;
+    opacity: 0.5;
+    
+  }
+    
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsl(220, 13%, 13%,0.9);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color:hsl(26, 100%, 55%)  ;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    padding-bottom:20px ;
+     
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0px;
+   
+  }
+  .prev{
+    left:0px
+  
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color:hsl(26, 100%, 55%);
+  }
+  
+  
+  
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  /*   
+  .active,
+  .demo:hover {
+    opacity: 1;
+  } */
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(231, 229, 229, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #cart{
+      width: 300px;
+    height: 180px;
+    box-shadow:-1px 5px 15px -5px black;
+    position:absolute;
+    left: 0;
+    right: 0;;
+    top: 100px;
+    background-color: white;
+    display: none;
+    margin-right: 50px;
+    margin-left: auto;
+  }
+  #cartname{
+    padding: 10px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    font-size: 0.9em;
+  }
+  #emcart{
+    color: hsl(219, 9%, 45%);
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 0.9em;
+    display: none;
+  
+  }
+  #incart{
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    
+  }
+  #cartitem{
+    display: none;
+    margin-left: 10px;
+  }
+  #cartnum{
+    position: absolute;
+   margin-left: 10px;
+   margin-top: 10px;
+   background-color:hsl(26, 100%, 55%) ;
+   border-radius: 20px;
+  font-size: 0.7em;
+  padding: 1px;
+   width: 20px;
+   text-align: center;
+   color: #ffffff;
+   display: none;
+  }
+  #icon{
+    font-size: 1.4em;
+  }
+  #close{
+    font-weight: bold;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+
+  
 }
-ul{
+@media screen and (min-width:420px) {
+     
+  body{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: none;
+  
+  }
+  header{
+   border-bottom: 1px solid hsl(220, 14%, 75%);
+   padding-bottom: 50px;
+   margin-bottom: 40px
+  }
+  #headerimg{
+    float: right;
+   margin-top: -10px;
+   cursor: pointer;
+  
+  }
+  #avatar{
+  height:40px; 
+  border: 2px solid rgb(0, 0, 0,0);
+   border-radius: 40px;
+  }
+  #avatar:hover{
+  border: 2px solid  hsl(26, 100%, 55%);
+  }
+  #headerimg1{
+    margin: -15px 10px 0px 0px;
+    display: inline;
+  
+  }
+  #sneak{
+    float: none;
+    margin-top: 10px;
+  }
+  ul{
     margin-left: 180px;
     margin-top: -20px;
-}
-li{
+  }
+  li{
     list-style: none;
     display: inline;
     margin: 15px;
     color:  hsl(219, 9%, 45%);
     cursor: pointer;
+    display: none;
     
     
-}
-li:hover{
+  }
+  li:hover{
     border-bottom: 6px solid hsl(26, 100%, 55%) ;
     padding-bottom:46px ;
-}
-#whole{
+  }
+  #whole{
     display: grid;
-    grid-template-columns: 50% 50%;
-}
-#bigimg{
-    height: 370px;
-    margin: 30px 50px;
+    /* grid-template-columns: 50% 50%; */
+  }
+  #bigimg{
+    height: 360px;
+    /* margin: 30px 50px; */
     border-radius: 20px;
     transition: 0.3s;
-}
-#bigimg:hover{
+  }
+  #bigimg:hover{
     opacity: 0.7
-}
-.smallimg{
-    height: 80px;
+  }
+  .smallimg{
+    height: 60px;
     margin-left: 15px;
     border-radius: 15px;
     cursor: pointer;
-}
-.smallimg:hover{
+  }
+  .smallimg:hover{
     opacity:0.7 ;
-}
-#smallimgs{
-    margin-left: 35px;
-}
-#second{
-    padding: 50px;
-}
-p{
+  }
+  #imgs{
+    margin: auto;
+  }
+  #smallimgs{
+    /* margin-left: 70px; */
+    display: none;
+  }
+  #second{
+    padding: 30px;
+  }
+  p{
     line-height: 25px;
     color:  hsl(219, 9%, 45%);
-    font-size: 0.9em;
-}
-.h2{
+    font-size: 0.8em;
+  }
+  .h2{
     display: inline-block;
     margin-right: 20px;
     margin-bottom: 10px;
-}
-#btn{
+  }
+  #btn{
     display: inline-block;
-    padding: 15px 60px 10px 60px;
+    padding: 15px 30px 10px 30px;
     border-radius: 5px;
     background-color: hsl(26, 100%, 55%);
     border: none;
@@ -96,51 +462,373 @@ p{
     box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
     cursor: pointer;
     
-}
-#btn:hover{
+  }
+  #btn:hover{
     opacity: 0.7;
-}
-#btn img{
+  }
+  #btn img{
     height:15px ;
     margin: 0px 10px -4px 0px;
-
-}
-#add{
+  
+  }
+  #add{
     display: inline-block;
     background-color: hsl(223, 64%, 98%);
-    padding: 8px 20px;
+    padding: 8px 5px;
     border-radius: 5px;
     font-size: 1.3em;
     cursor: pointer;
     
-}
-#minus{
+  }
+  #minus{
     color: hsl(26, 100%, 55%);
     /* font-size: 24px; */
-}
-#zero{
-    margin: 0px 40px;
+  }
+  #zero{
+    margin: 0px 50px;
     /* font-size: 22px; */
-}
-#plus{
+  }
+  #plus{
     color: hsl(26, 100%, 55%);
     /* font-size: 24px; */
-}
-#fifty{
+  }
+  #fifty{
     background-color:hsl(25, 100%, 94%) ;
     color: hsl(26, 100%, 55%);
     font-size: 1.2em;
     padding: 2px;
     border-radius: 5px;
     margin-left: -5px;
-}
-.active{
+  }
+  .active{
     outline: 3px solid hsl(26, 100%, 55%) ;
     opacity: 0.5;
     
-}
+  }
     
-.row > .column {
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsl(220, 13%, 13%,0.9);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color:hsl(26, 100%, 55%)  ;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    padding-bottom:20px ;
+     
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  
+  /* Position the "next button" to the right */
+  .next {
+    left: 380px;
+   
+  }
+  .prev{
+    left:-30px
+  
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color:hsl(26, 100%, 55%);
+  }
+  
+  
+  
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  /*   
+  .active,
+  .demo:hover {
+    opacity: 1;
+  } */
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(231, 229, 229, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #cart{
+      width: 300px;
+    height: 180px;
+    box-shadow:-1px 5px 15px -5px black;
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    background-color: white;
+    display: none;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  #cartname{
+    padding: 10px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    font-size: 0.9em;
+  }
+  #emcart{
+    color: hsl(219, 9%, 45%);
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 0.9em;
+    display: none;
+  
+  }
+  #incart{
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+  #cartitem{
+    display: none;
+  }
+  #cartnum{
+    position: absolute;
+   margin-left: 10px;
+   margin-top: 10px;
+   background-color:hsl(26, 100%, 55%) ;
+   border-radius: 20px;
+  font-size: 0.7em;
+  padding: 1px;
+   width: 20px;
+   text-align: center;
+   color: #ffffff;
+   display: none;
+  }
+
+  
+}
+
+@media screen and (min-width:700px) {
+  body{
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  header{
+   border-bottom: 1px solid hsl(220, 14%, 75%);
+   padding-bottom: 50px;
+   margin-bottom: 40px
+  }
+  #headerimg{
+    float: right;
+   margin-top: -30px;
+   cursor: pointer;
+  
+  }
+  #avatar{
+  height:40px; 
+  border: 2px solid rgb(0, 0, 0,0);
+   border-radius: 40px;
+  }
+  #avatar:hover{
+  border: 2px solid  hsl(26, 100%, 55%);
+  }
+  #headerimg1{
+    margin: -15px 30px 0px 0px;
+    display: inline;
+  
+  }
+  #sneak{
+    float: none;
+    margin-top: 10px;
+  }
+  ul{
+    margin-left: 180px;
+    margin-top: -20px;
+    display: block;
+  }
+  li{
+    list-style: none;
+    font-size: 0.9em;
+    display: inline;
+    margin: 10px;
+    color:  hsl(219, 9%, 45%);
+    cursor: pointer;
+    /* display: block; */
+    
+    
+  }
+  li:hover{
+    border-bottom: 6px solid hsl(26, 100%, 55%) ;
+    padding-bottom:46px ;
+  }
+  #whole{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #bigimg{
+    height: 320px;
+    margin: 10px 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  #bigimg:hover{
+    opacity: 0.7
+  }
+  .smallimg{
+    height: 50px;
+    margin-left: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .smallimg:hover{
+    opacity:0.7 ;
+  }
+  #smallimgs{
+    margin-left: 40px;
+  }
+  #second{
+    padding: 30px;
+    margin-left: 10px;
+  }
+  p{
+    line-height: 25px;
+    color:  hsl(219, 9%, 45%);
+    font-size: 0.7em;
+  }
+  .h2{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  #btn{
+    display: inline-block;
+    padding: 15px 30px 10px 30px;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    margin-left: 10px;
+    color: white;
+    box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
+    cursor: pointer;
+    
+  }
+  #btn:hover{
+    opacity: 0.7;
+  }
+  #btn img{
+    height:15px ;
+    margin: 0px 10px -4px 0px;
+  
+  }
+  #add{
+    display: inline-block;
+    background-color: hsl(223, 64%, 98%);
+    padding: 8px 3px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    
+  }
+
+  #minus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #zero{
+    margin: 0px 20px;
+    /* font-size: 22px; */
+  }
+  #plus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #fifty{
+    background-color:hsl(25, 100%, 94%) ;
+    color: hsl(26, 100%, 55%);
+    font-size: 1.2em;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: -5px;
+  }
+  .active{
+    outline: 3px solid hsl(26, 100%, 55%) ;
+    opacity: 0.5;
+    
+  }
+    
+  .row > .column {
     padding: 0 8px;
   }
   
@@ -222,7 +910,7 @@ p{
     user-select: none;
     -webkit-user-select: none;
   }
-
+  
   
   /* Position the "next button" to the right */
   .next {
@@ -231,7 +919,7 @@ p{
   }
   .prev{
     left:-30px
-
+  
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -246,7 +934,7 @@ p{
   img.demo {
     opacity: 0.6;
   }
-/*   
+  /*   
   .active,
   .demo:hover {
     opacity: 1;
@@ -264,10 +952,13 @@ p{
     height: 180px;
     box-shadow:-1px 5px 15px -5px black;
     position:absolute;
-    left: 1100px;
+    left: 0;
+    right: 0;;
     top: 100px;
     background-color: white;
     display: none;
+    margin-right: 30px;
+    margin-left: auto;
   }
   #cartname{
     padding: 10px;
@@ -281,7 +972,7 @@ p{
     padding-left: 80px;
     font-size: 0.9em;
     display: none;
-
+  
   }
   #incart{
     padding: 10px;
@@ -304,4 +995,653 @@ p{
    color: #ffffff;
    display: none;
   }
+  #icon{
+    font-size: 1.4em;
+    display: none;
+  }
+  
+  
+}
+
+@media screen and (min-width:750px) {
+    
+  body{
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  header{
+   border-bottom: 1px solid hsl(220, 14%, 75%);
+   padding-bottom: 50px;
+   margin-bottom: 40px
+  }
+  #headerimg{
+    float: right;
+   margin-top: -30px;
+   cursor: pointer;
+  
+  }
+  #avatar{
+  height:40px; 
+  border: 2px solid rgb(0, 0, 0,0);
+   border-radius: 40px;
+  }
+  #avatar:hover{
+  border: 2px solid  hsl(26, 100%, 55%);
+  }
+  #headerimg1{
+    margin: -15px 30px 0px 0px;
+    display: inline;
+  
+  }
+  #sneak{
+    float: none;
+    margin-top: 10px;
+  }
+  ul{
+    margin-left: 160px;
+    margin-top: -20px;
+  }
+  li{
+    list-style: none;
+    font-size: 0.9em;
+    display: inline;
+    margin: 10px;
+    color:  hsl(219, 9%, 45%);
+    cursor: pointer;
+    
+    
+  }
+  li:hover{
+    border-bottom: 6px solid hsl(26, 100%, 55%) ;
+    padding-bottom:46px ;
+  }
+  #whole{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  #bigimg{
+    height: 340px;
+    margin: 10px 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  #bigimg:hover{
+    opacity: 0.7
+  }
+  .smallimg{
+    height: 60px;
+    margin-left: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  .smallimg:hover{
+    opacity:0.7 ;
+  }
+  #smallimgs{
+    margin-left: 40px;
+  }
+  #second{
+    padding: 30px;
+    margin-left: 10px;
+  }
+  p{
+    line-height: 25px;
+    color:  hsl(219, 9%, 45%);
+    font-size: 0.8em;
+  }
+  .h2{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  #btn{
+    display: inline-block;
+    padding: 15px 30px 10px 30px;
+    border-radius: 5px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    margin-left: 10px;
+    color: white;
+    box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
+    cursor: pointer;
+    
+  }
+  #btn:hover{
+    opacity: 0.7;
+  }
+  #btn img{
+    height:15px ;
+    margin: 0px 10px -4px 0px;
+  
+  }
+  #add{
+    display: inline-block;
+    background-color: hsl(223, 64%, 98%);
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    
+  }
+  #minus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #zero{
+    margin: 0px 30px;
+    /* font-size: 22px; */
+  }
+  #plus{
+    color: hsl(26, 100%, 55%);
+    /* font-size: 24px; */
+  }
+  #fifty{
+    background-color:hsl(25, 100%, 94%) ;
+    color: hsl(26, 100%, 55%);
+    font-size: 1.2em;
+    padding: 2px;
+    border-radius: 5px;
+    margin-left: -5px;
+  }
+  .active{
+    outline: 3px solid hsl(26, 100%, 55%) ;
+    opacity: 0.5;
+    
+  }
+    
+  .row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hsl(220, 13%, 13%,0.9);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    /* background-color: #fefefe; */
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 450px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color:hsl(26, 100%, 55%)  ;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    padding-bottom:20px ;
+     
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  
+  /* Position the "next button" to the right */
+  .next {
+    left: 420px;
+   
+  }
+  .prev{
+    left:-30px
+  
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    color:hsl(26, 100%, 55%);
+  }
+  
+  
+  
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  /*   
+  .active,
+  .demo:hover {
+    opacity: 1;
+  } */
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(231, 229, 229, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #cart{
+      width: 300px;
+    height: 180px;
+    box-shadow:-1px 5px 15px -5px black;
+    position:absolute;
+    left: 0;
+    right: 0;;
+    top: 100px;
+    background-color: white;
+    display: none;
+    margin-right: 40px;
+    margin-left: auto;
+  }
+  #cartname{
+    padding: 10px;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    font-size: 0.9em;
+  }
+  #emcart{
+    color: hsl(219, 9%, 45%);
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 80px;
+    font-size: 0.9em;
+    display: none;
+  
+  }
+  #incart{
+    padding: 10px;
+    cursor: pointer;
+    
+  }
+  #cartitem{
+    display: none;
+  }
+  #cartnum{
+    position: absolute;
+   margin-left: 10px;
+   margin-top: 10px;
+   background-color:hsl(26, 100%, 55%) ;
+   border-radius: 20px;
+  font-size: 0.7em;
+  padding: 1px;
+   width: 20px;
+   text-align: center;
+   color: #ffffff;
+   display: none;
+  }
+  
+    
+  }
+@media screen and (min-width: 1000px){
+  
+body{
+  padding: 30px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+header{
+ border-bottom: 1px solid hsl(220, 14%, 75%);
+ padding-bottom: 50px;
+ margin-bottom: 40px
+}
+#headerimg{
+  float: right;
+ margin-top: -30px;
+ cursor: pointer;
+
+}
+#avatar{
+height:40px; 
+border: 2px solid rgb(0, 0, 0,0);
+ border-radius: 40px;
+}
+#avatar:hover{
+border: 2px solid  hsl(26, 100%, 55%);
+}
+#headerimg1{
+  margin: -15px 30px 0px 0px;
+  display: inline;
+
+}
+#sneak{
+  float: none;
+  margin-top: 10px;
+}
+ul{
+  margin-left: 180px;
+  margin-top: -20px;
+}
+li{
+  list-style: none;
+  display: inline;
+  margin: 15px;
+  color:  hsl(219, 9%, 45%);
+  cursor: pointer;
+  
+  
+}
+li:hover{
+  border-bottom: 6px solid hsl(26, 100%, 55%) ;
+  padding-bottom:46px ;
+}
+#whole{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#bigimg{
+  height: 370px;
+  margin: 30px 50px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+#bigimg:hover{
+  opacity: 0.7
+}
+.smallimg{
+  height: 80px;
+  margin-left: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.smallimg:hover{
+  opacity:0.7 ;
+}
+#smallimgs{
+  margin-left: 35px;
+}
+#second{
+  padding: 50px;
+}
+p{
+  line-height: 25px;
+  color:  hsl(219, 9%, 45%);
+  font-size: 0.9em;
+}
+.h2{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+#btn{
+  display: inline-block;
+  padding: 15px 40px 10px 40px;
+  border-radius: 5px;
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  margin-left: 10px;
+  color: white;
+  box-shadow: 0px 25px 10px -4px hsl(25, 100%, 94%);
+  cursor: pointer;
+  
+}
+#btn:hover{
+  opacity: 0.7;
+}
+#btn img{
+  height:15px ;
+  margin: 0px 10px -4px 0px;
+
+}
+#add{
+  display: inline-block;
+  background-color: hsl(223, 64%, 98%);
+  padding: 8px 10px;
+  border-radius: 5px;
+  font-size: 1.3em;
+  cursor: pointer;
+  
+}
+#minus{
+  color: hsl(26, 100%, 55%);
+  /* font-size: 24px; */
+}
+#zero{
+  margin: 0px 40px;
+  /* font-size: 22px; */
+}
+#plus{
+  color: hsl(26, 100%, 55%);
+  /* font-size: 24px; */
+}
+#fifty{
+  background-color:hsl(25, 100%, 94%) ;
+  color: hsl(26, 100%, 55%);
+  font-size: 1.2em;
+  padding: 2px;
+  border-radius: 5px;
+  margin-left: -5px;
+}
+.active{
+  outline: 3px solid hsl(26, 100%, 55%) ;
+  opacity: 0.5;
+  
+}
+  
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: hsl(220, 13%, 13%,0.9);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  /* background-color: #fefefe; */
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 450px;
+}
+
+/* The Close Button */
+.close {
+  color:hsl(26, 100%, 55%)  ;
+  position: absolute;
+  top: 40px;
+  right: 300px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+  padding-bottom:20px ;
+   
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  left: 420px;
+ 
+}
+.prev{
+  left:-30px
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color:hsl(26, 100%, 55%);
+}
+
+
+
+
+img.demo {
+  opacity: 0.6;
+}
+/*   
+.active,
+.demo:hover {
+  opacity: 1;
+} */
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(231, 229, 229, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#cart{
+  width: 300px;
+  height: 180px;
+  box-shadow:-1px 5px 15px -5px black;
+  position:absolute;
+  left: 0;
+  right: 0;;
+  top: 100px;
+  background-color: white;
+  display: none;
+  margin-right: 100px;
+  margin-left: auto;
+}
+#cartname{
+  padding: 10px;
+  border-bottom: 1px solid hsl(220, 14%, 75%);
+  font-size: 0.9em;
+}
+#emcart{
+  color: hsl(219, 9%, 45%);
+  margin: auto;
+  padding-top: 50px;
+  padding-left: 80px;
+  font-size: 0.9em;
+  display: none;
+
+}
+#incart{
+  padding: 10px;
+  cursor: pointer;
+  
+}
+#cartitem{
+  display: none;
+}
+#cartnum{
+  position: absolute;
+ margin-left: 10px;
+ margin-top: 10px;
+ background-color:hsl(26, 100%, 55%) ;
+ border-radius: 20px;
+font-size: 0.7em;
+padding: 1px;
+ width: 20px;
+ text-align: center;
+ color: #ffffff;
+ display: none;
+}
+#icon{
+  font-size: 1.4em;
+  display: none;
+}
+
+  
+}
 

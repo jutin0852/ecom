@@ -9,7 +9,8 @@
 </head>
 <body>
     <main>
-    <header>
+    <header id="head">
+      <span id="icon">&#9776;</span>
         <img id="sneak" src="images/logo.svg" alt="">
         <ul>
             <li>Collections</li>
@@ -18,12 +19,20 @@
             <li>About</li>
             <li>Contact</li>
         </ul>
+        <ul id="tab">
+          <div id="close">&times;</div>
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+      </ul>
         
         <div id="headerimg">
           <span id="cartnum"></span>
           <img id="headerimg1"  src="/images/icon-cart.svg" onclick="cart()" >
           
-          <img style="height:40px ;" src="/images/image-avatar.png" >
+          <img id="avatar" src="/images/image-avatar.png" >
           <span>
            
            
@@ -60,8 +69,8 @@
     <div id="second">
         <h2 style="color:hsl(26, 100%, 55%) ;font-size: 1em;">SNEAKER COMPANY</h2><br>
         <h1>Fall Limited Edition Sneakers</h1><br>
-        <p>These low-profile sneakers are your casual wear <br> companion. Featuring a durable rubber outer sole,
-             they'll <br> withstand everything the weather can offer.</p><br>
+        <p>These low-profile sneakers are your casual wear <br> companion. Featuring a durable rubber outer sole,<br>
+             they'll withstand everything the weather can offer.</p><br>
              <h1 style="font-size:1.3em ;" class="h2">$150.00</h1>
              <h2 id="fifty" class="h2">50%</h2>
              <h2 style="font-size:0.9em ;color: hsl(220, 14%, 75%); text-decoration: line-through; ">$250.00</h2><br>

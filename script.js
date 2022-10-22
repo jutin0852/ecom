@@ -51,9 +51,9 @@ var incart=document.getElementById("incart")
 
 
   function cart(){
-      if(cartshop.className==""){
+      if(cartshop.style.display=="none"){
             cartshop.style.display="block";
-            cartshop.classList.add("cartt");
+        
         if(!cartnum.textContent==""){
           cartItem.style.display="block";
         
@@ -68,12 +68,12 @@ var incart=document.getElementById("incart")
       }
       else{
         cartshop.style.display="none";
-        cartshop.classList.remove("cartt");
+        
       }   
   }
 function add(){
   cartshop.style.display="none";
-  cartshop.classList.remove("cartt");
+  
   if(event.target.id=="minus"){
     if(zero.textContent>0){
       zero.textContent--;}}
@@ -84,7 +84,7 @@ function add(){
 }
 function btn(){
   cartshop.style.display="none";
-  cartshop.classList.remove("cartt");
+  
   
   if(zero.textContent>0){
     cartnum.style.display="block";
@@ -108,5 +108,15 @@ incart.addEventListener('click',function(e){
    emptyCart.style.display="block";
    cartnum.textContent="";
    cartnum.style.display="none"
+  }
+})
+var tab=document.getElementById("tab");
+var head=document.getElementById('head');
+head.addEventListener("click",function(e){
+  if(e.target.id=="icon"){
+    tab.style.display="block"
+  }
+  if(e.target.id=="close"){
+    tab.style.display="none"
   }
 })
