@@ -759,6 +759,7 @@
   }
   #smallimgs{
     margin-left: 40px;
+    display: block;
   }
   #second{
     padding: 30px;
@@ -1084,6 +1085,7 @@
   }
   #smallimgs{
     margin-left: 40px;
+    display: block;
   }
   #second{
     padding: 30px;
@@ -1403,6 +1405,7 @@ li:hover{
 }
 #smallimgs{
   margin-left: 35px;
+  display: block;
 }
 #second{
   padding: 50px;
